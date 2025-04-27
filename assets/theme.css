@@ -9878,3 +9878,9 @@ split-lines {
   display: -webkit-box;
   overflow: hidden;
 }
+body {
+  background: url("https://cdn.shopify.com/s/files/1/0678/7380/0364/files/vivid-blurred-colorful-background.jpg?v=1745756224") !important; /* change image as you like */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
