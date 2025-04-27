@@ -9878,9 +9878,3 @@ split-lines {
   display: -webkit-box;
   overflow: hidden;
 }
-body {
-  background: url("https://cdn.shopify.com/s/files/1/0678/7380/0364/files/3131173.jpg?v=1745756216") !important; /* change image as you like */
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
