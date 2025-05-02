@@ -1,0 +1,37 @@
+{% layout 'theme' %}
+{% section 'header' %}
+
+<div class="check-carefully-container">
+  <div class="product-viewer">
+    <div class="product-display-area">
+      {% for product in collections.all.products %}
+        <div class="product-card" data-product-id="{{ product.id }}">
+          <div class="product-3d-container">
+            <img src="{{ product.featured_image | img_url: '800x' }}" 
+                 alt="{{ product.title }}" 
+                 class="product-image-3d">
+          </div>
+          <div class="product-info">
+            <h3>{{ product.title }}</h3>
+            <span class="price">{{ product.price | money }}</span>
+            <a href="{{ product.url }}" class="btn">View Details</a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="navigation-controls">
+      <button class="nav-btn prev-btn">←</button>
+      <button class="nav-btn next-btn">→</button>
+    </div>
+  </div>
+</div>
+
+{% section 'footer' %}
+
+<style>
+  /* CSS will go here */
+</style>
+
+<script>
+  // JavaScript will go here
+</script>
