@@ -1,188 +1,194 @@
-<!-- Add this inside the quick-view modal -->
-<div class="customization-panel">
-  <h3>Customize Your Product</h3>
-  
-  {% for option in product.options_with_values %}
-    <div class="option-selector">
-      <label>{{ option.name }}</label>
-      <div class="option-values">
-        {% for value in option.values %}
-          <div class="option-value" 
-               data-option="{{ option.name | handleize }}"
-               data-value="{{ value | handleize }}">
-            {% if option.name == 'Color' %}
-              <span class="color-swatch" style="background-color: {{ value | handleize }};"></span>
-            {% else %}
-              {{ value }}
-            {% endif %}
-          </div>
-        {% endfor %}
-      </div>
+{% comment %}
+  Animated product showcase using 3 real products from a collection.
+  Each animated block is clickable and shows the product title.
+{% endcomment %}
+
+{% assign fallback_images = "https://assets.codepen.io/907368/slider-1.jpg?format=webp&quality=40,
+https://assets.codepen.io/907368/slider-2.jpg?format=webp&quality=40,
+https://assets.codepen.io/907368/slider-3.jpg?format=webp&quality=40" | split: "," %}
+
+{% assign products = collections['clothes-and-accessories'].products %}
+{% assign has_products = products.size > 2 %}
+
+{% if has_products %}
+  {% assign image_1 = products[0].featured_image | img_url: 'master' %}
+  {% assign image_2 = products[1].featured_image | img_url: 'master' %}
+  {% assign image_3 = products[2].featured_image | img_url: 'master' %}
+  {% assign title_1 = products[0].title %}
+  {% assign title_2 = products[1].title %}
+  {% assign title_3 = products[2].title %}
+  {% assign url_1 = products[0].url %}
+  {% assign url_2 = products[1].url %}
+  {% assign url_3 = products[2].url %}
+{% else %}
+  {% assign image_1 = fallback_images[0] %}
+  {% assign image_2 = fallback_images[1] %}
+  {% assign image_3 = fallback_images[2] %}
+  {% assign title_1 = "Product One" %}
+  {% assign title_2 = "Product Two" %}
+  {% assign title_3 = "Product Three" %}
+  {% assign url_1 = "#" %}
+  {% assign url_2 = "#" %}
+  {% assign url_3 = "#" %}
+{% endif %}
+
+<style>
+  @font-face {
+    font-family: "Roboto";
+    src: url("https://assets.codepen.io/907368/Roboto-Regular.ttf");
+    font-weight: 500;
+  }
+
+  body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #0c1016;
+    font-family: "Roboto", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    max-width: 20rem;
+    gap: 0.5rem;
+  }
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+  }
+
+  .item-wrapper {
+    position: relative;
+    width: 100%;
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+
+  .item {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: animateBackground 9s infinite ease-in-out;
+  }
+
+  .item-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(12, 16, 22, 0.6);
+    color: #fff;
+    padding: 0.3rem 0.5rem;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  a.item-link {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .column-1 .item-wrapper:nth-child(1) .item { height: 4rem; animation-delay: 0s; }
+  .column-1 .item-wrapper:nth-child(2) .item { height: 6rem; animation-delay: 0.2s; }
+  .column-1 .item-wrapper:nth-child(3) .item { height: 3rem; animation-delay: 0.3s; }
+  .column-2 .item-wrapper:nth-child(1) .item { height: 4rem; animation-delay: 0s; }
+  .column-2 .item-wrapper:nth-child(2) .item { height: 9rem; animation-delay: 0.2s; }
+  .column-2 .item-wrapper:nth-child(3) .item { height: 3rem; animation-delay: 0.3s; }
+  .column-3 .item-wrapper:nth-child(1) .item { height: 6rem; animation-delay: 0.1s; }
+  .column-3 .item-wrapper:nth-child(2) .item { height: 5rem; animation-delay: 0.05s; }
+  .column-3 .item-wrapper:nth-child(3) .item { height: 3rem; animation-delay: 0.3s; }
+
+  @keyframes animateBackground {
+    0%, 30% {
+      background-image: url('{{ image_1 }}');
+    }
+    33%, 63% {
+      background-image: url('{{ image_2 }}');
+    }
+    66%, 96% {
+      background-image: url('{{ image_3 }}');
+    }
+    100% {
+      background-image: url('{{ image_1 }}');
+    }
+  }
+</style>
+
+<div class="container">
+  <div class="column column-1">
+    <div class="item-wrapper">
+      <a href="{{ url_1 }}" class="item-link">
+        <div class="item"></div>
+        <div class="item-title">{{ title_1 }}</div>
+      </a>
     </div>
-  {% endfor %}
-  
-  <div class="personalization">
-    <label>Add Personalization</label>
-    <input type="text" placeholder="Enter custom text (max 15 chars)" maxlength="15" class="custom-text">
-    <div class="preview-text">Preview: <span></span></div>
+    <div class="item-wrapper">
+      <a href="{{ url_2 }}" class="item-link">
+        <div class="item"></div>
+        <div class="item-title">{{ title_2 }}</div>
+      </a>
+    </div>
+    <div class="item-wrapper">
+      <a href="{{ url_3 }}" class="item-link">
+        <div class="item"></div>
+        <div class="item-title">{{ title_3 }}</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="column column-2">
+    <div class="item-wrapper">
+      <a href="{{ url_1 }}" class="item-link">
+        <div class="item"></div>
+        <div class="item-title">{{ title_1 }}</div>
+      </a>
+    </div>
+    <div class="item-wrapper">
+      <a href="{{ url_2 }}" class="item-link">
+        <div class="item"></div>
+        <div class="item-title">{{ title_2 }}</div>
+      </a>
+    </div>
+    <div class="item-wrapper">
+      <a href="{{ url_3 }}" class="item-link">
+        <div class="item"></div>
+        <div class="item-title">{{ title_3 }}</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="column column-3">
+    <div class="item-wrapper">
+      <a href="{{ url_1 }}" class="item-link">
+        <div class="item"></div>
+        <div class="item-title">{{ title_1 }}</div>
+      </a>
+    </div>
+    <div class="item-wrapper">
+      <a href="{{ url_2 }}" class="item-link">
+        <div class="item"></div>
+        <div class="item-title">{{ title_2 }}</div>
+      </a>
+    </div>
+    <div class="item-wrapper">
+      <a href="{{ url_3 }}" class="item-link">
+        <div class="item"></div>
+        <div class="item-title">{{ title_3 }}</div>
+      </a>
+    </div>
   </div>
 </div>
 
-<style>
-.customization-panel {
-  margin: 25px 0;
-  padding: 20px;
-  background: rgba(255,255,255,0.05);
-  border-radius: 8px;
-}
-
-.option-selector {
-  margin-bottom: 15px;
-}
-
-.option-selector label {
-  display: block;
-  margin-bottom: 8px;
-  text-transform: uppercase;
-  font-size: 12px;
-  letter-spacing: 1px;
-}
-
-.option-values {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.option-value {
-  padding: 8px 12px;
-  border: 1px solid rgba(255,255,255,0.3);
-  border-radius: 4px;
-  cursor: pointer;
-  transition: all 0.3s;
-  font-size: 14px;
-}
-
-.option-value:hover {
-  border-color: #f39041;
-}
-
-.option-value.selected {
-  background: #f39041;
-  border-color: #f39041;
-}
-
-.color-swatch {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  vertical-align: middle;
-  margin-right: 5px;
-}
-
-.personalization {
-  margin-top: 20px;
-}
-
-.personalization input {
-  width: 100%;
-  padding: 10px;
-  background: rgba(255,255,255,0.1);
-  border: 1px solid rgba(255,255,255,0.3);
-  color: white;
-  border-radius: 4px;
-  margin-top: 8px;
-}
-
-.preview-text {
-  margin-top: 10px;
-  font-size: 14px;
-  opacity: 0.8;
-}
-
-.preview-text span {
-  font-style: italic;
-  color: #f39041;
-}
-</style>
-
-<script>
-// Add to your existing script
-document.addEventListener('DOMContentLoaded', function() {
-  // Product customization
-  const optionValues = document.querySelectorAll('.option-value');
-  
-  optionValues.forEach(option => {
-    option.addEventListener('click', function() {
-      const optionName = this.getAttribute('data-option');
-      const optionValue = this.getAttribute('data-value');
-      
-      // Remove selected class from siblings
-      this.parentNode.querySelectorAll('.option-value').forEach(el => {
-        el.classList.remove('selected');
-      });
-      
-      // Add selected class to clicked option
-      this.classList.add('selected');
-      
-      // Update variant selection
-      updateVariantSelection();
-    });
-  });
-  
-  // Personalization text
-  const customTextInput = document.querySelector('.custom-text');
-  const previewText = document.querySelector('.preview-text span');
-  
-  if (customTextInput && previewText) {
-    customTextInput.addEventListener('input', function() {
-      previewText.textContent = this.value;
-      
-      // Update the product title in the modal
-      const productTitle = document.querySelector('.modal-product-info h1');
-      if (productTitle) {
-        const originalTitle = productTitle.getAttribute('data-original-title') || productTitle.textContent;
-        productTitle.setAttribute('data-original-title', originalTitle);
-        productTitle.textContent = originalTitle + (this.value ? ` - "${this.value}"` : '');
-      }
-    });
-  }
-  
-  function updateVariantSelection() {
-    const selectedOptions = {};
-    document.querySelectorAll('.option-selector .selected').forEach(selected => {
-      const optionName = selected.getAttribute('data-option');
-      const optionValue = selected.getAttribute('data-value');
-      selectedOptions[optionName] = optionValue;
-    });
-    
-    // Find matching variant
-    const variants = JSON.parse(document.querySelector('[data-variants-json]').textContent);
-    const customText = customTextInput ? customTextInput.value : '';
-    
-    const matchedVariant = variants.find(variant => {
-      return variant.options.every((option, index) => {
-        const optionName = option${index + 1};
-        return selectedOptions[optionName] === option.toLowerCase();
-      });
-    });
-    
-    if (matchedVariant) {
-      document.querySelector('.quick-add input[name="id"]').value = matchedVariant.id;
-      
-      // Update price if different
-      const priceElement = document.querySelector('.modal-product-info .price');
-      if (priceElement && matchedVariant.price !== parseFloat(priceElement.getAttribute('data-base-price'))) {
-        priceElement.textContent = Shopify.formatMoney(matchedVariant.price);
-      }
-    }
-  }
-  
-  // Add this to your quick view modal initialization
-  const modalContent = document.querySelector('.modal-product-content');
-  if (modalContent) {
-    modalContent.setAttribute('data-variants-json', JSON.stringify({{ product.variants | json }}));
-  }
-});
-</script>
