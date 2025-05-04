@@ -2078,6 +2078,16 @@
     "navigation_and_structure": {
       "orders_link_label": "طلبات",
       "search": "يبحث"
+    },
+    "shop_ads": {
+      "previous_button": "سابق",
+      "next_button": "التالي"
+    },
+    "knowledge_base": {
+      "self_serve_returns": {
+        "enabled": "يمكن للعملاء طلب وإدارة الإرجاعات بأنفسهم.",
+        "disabled": "يجب على العملاء الاتصال بالتاجر لطلب الإرجاع."
+      }
     }
   }
 }
