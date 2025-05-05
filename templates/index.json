@@ -9,6 +9,21 @@
  */
 {
   "sections": {
+    "scrolling-text": {
+      "type": "scrolling-text",
+      "settings": {
+        "full_width": true,
+        "text": "⬇️LIVRAISON GRATUITE⬇️",
+        "text_size": "small",
+        "text_style": "fill",
+        "scrolling_mode": "auto",
+        "scrolling_speed": 5,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "text_gradient": ""
+      }
+    },
     "slideshow": {
       "type": "slideshow",
       "blocks": {
@@ -497,21 +512,6 @@
         "logo_item_border": ""
       }
     },
-    "scrolling-text": {
-      "type": "scrolling-text",
-      "settings": {
-        "full_width": true,
-        "text": "⬇️LIVRAISON GRATUITE⬇️",
-        "text_size": "small",
-        "text_style": "fill",
-        "scrolling_mode": "auto",
-        "scrolling_speed": 5,
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "text_gradient": ""
-      }
-    },
     "hot-spots": {
       "type": "hot-spots",
       "blocks": {
@@ -891,6 +891,7 @@
     "slideshow",
     "image-link-blocks",
     "collection-list",
+    "scrolling-text",
     "featured-collection",
     "impact-text",
     "image-with-text-overlay",
@@ -901,7 +902,6 @@
     "multiple-images-with-text",
     "featured-product",
     "feature-chart",
-    "scrolling-text",
     "faq"
   ]
 }
