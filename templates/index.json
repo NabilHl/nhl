@@ -622,6 +622,55 @@
         "button_text_color": ""
       }
     },
+    "featured_collection_TREEVV": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "collection": "",
+        "products": [
+          "adidas-classic-back-to-school-3-stripes-backpack",
+          "adidas-essentials-3-stripes-performance-backpack",
+          "adidas-sacoche-1",
+          "adidas-sacoche",
+          "adidas-sacoche-lego-edition",
+          "c-p-company-extra-fine-merino-wool-goggle-beanie",
+          "calecon-balenciaga",
+          "calecon-burberry",
+          "calecon-calvin-klein-hilfiger-tommy",
+          "calecon-hermes-paris",
+          "calecon-louis-vuitton",
+          "calecon-under-armor",
+          "casquette",
+          "calecon-lacoste",
+          "casquette-adidas-terrex",
+          "jordan-apex-bucket-hat",
+          "lacoste-ribbed-wool-beanie",
+          "gucci-casquette",
+          "louis-vuitton-cross-bag",
+          "prada-re-nylon-triangle-shoulder-bag",
+          "sac-banane-nike-heritage",
+          "sac-banane-nike-heritage-grey"
+        ],
+        "full_width": true,
+        "stack_products": true,
+        "show_progress_bar": false,
+        "products_count": 20,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 5,
+        "subheading": "",
+        "title": "Featured collection",
+        "content": "",
+        "link_url": "",
+        "link_text": "View all",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "product_card_background": "",
+        "product_card_text_color": ""
+      }
+    },
     "featured-product": {
       "type": "featured-product",
       "blocks": {
@@ -886,55 +935,6 @@
         "accordion_background": "",
         "accordion_text_color": ""
       }
-    },
-    "featured_collection_TREEVV": {
-      "type": "featured-collection",
-      "name": "Featured collection",
-      "settings": {
-        "collection": "",
-        "products": [
-          "adidas-classic-back-to-school-3-stripes-backpack",
-          "adidas-essentials-3-stripes-performance-backpack",
-          "adidas-sacoche-1",
-          "adidas-sacoche",
-          "adidas-sacoche-lego-edition",
-          "c-p-company-extra-fine-merino-wool-goggle-beanie",
-          "calecon-balenciaga",
-          "calecon-burberry",
-          "calecon-calvin-klein-hilfiger-tommy",
-          "calecon-hermes-paris",
-          "calecon-louis-vuitton",
-          "calecon-under-armor",
-          "casquette",
-          "calecon-lacoste",
-          "casquette-adidas-terrex",
-          "jordan-apex-bucket-hat",
-          "lacoste-ribbed-wool-beanie",
-          "gucci-casquette",
-          "louis-vuitton-cross-bag",
-          "prada-re-nylon-triangle-shoulder-bag",
-          "sac-banane-nike-heritage",
-          "sac-banane-nike-heritage-grey"
-        ],
-        "full_width": true,
-        "stack_products": true,
-        "show_progress_bar": false,
-        "products_count": 20,
-        "products_per_row_mobile": "2",
-        "products_per_row_desktop": 5,
-        "subheading": "",
-        "title": "Featured collection",
-        "content": "",
-        "link_url": "",
-        "link_text": "View all",
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": "",
-        "product_card_background": "",
-        "product_card_text_color": ""
-      }
     }
   },
   "order": [
@@ -950,9 +950,9 @@
     "press",
     "hot-spots",
     "multiple-images-with-text",
+    "featured_collection_TREEVV",
     "featured-product",
     "feature-chart",
-    "faq",
-    "featured_collection_TREEVV"
+    "faq"
   ]
 }
