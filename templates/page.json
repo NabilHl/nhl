@@ -21,20 +21,20 @@
         "subheading_yN9xM4": {
           "type": "subheading",
           "settings": {
-            "text": "Subheading"
+            "text": ""
           }
         },
         "heading_fPpk9G": {
           "type": "heading",
           "settings": {
-            "text": "Image with text overlay",
+            "text": "",
             "heading_tag": "h1"
           }
         },
         "richtext_z4GDFB": {
           "type": "richtext",
           "settings": {
-            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+            "content": ""
           }
         }
       },
@@ -49,11 +49,12 @@
         "allow_transparent_header": false,
         "enable_parallax": false,
         "image_size": "auto",
+        "image": "shopify://shop_images/1000003421.jpg",
         "mobile_text_position": "place-self-center text-center",
         "desktop_text_position": "sm:place-self-center sm:text-center",
         "text_color": "#ffffff",
         "overlay_color": "#000000",
-        "overlay_opacity": 30
+        "overlay_opacity": 0
       }
     },
     "video_e9ErmY": {
