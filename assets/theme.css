@@ -9996,10 +9996,10 @@ split-lines {
   }
 }
 @font-face {
-font-family: "Gafien";
-src: url("Gafien.woff2") format("woff2"),
-url("Gafien.woff") format("woff");
+font-family: "Caliste";
+src: url("Caliste.woff2") format("woff2"),
+url("Caliste.woff") format("woff");
 }
  
-h1,h2,h3,h4,h5,h6,body,p,a { font-family: "Gafien"!important; }
+h1,h2,h3,h4,h5,h6,body,p,a { font-family: "Caliste"!important; }
  
