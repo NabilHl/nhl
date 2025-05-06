@@ -231,11 +231,11 @@
       "type": "scrolling-text",
       "settings": {
         "full_width": true,
-        "text": "⬇️LIVRAISON GRATUITE⬇️",
+        "text": "LIVRAISON GRATUITE",
         "text_size": "xsmall",
         "text_style": "fill",
         "scrolling_mode": "auto",
-        "scrolling_speed": 5,
+        "scrolling_speed": 10,
         "background": "",
         "background_gradient": "",
         "text_color": "",
