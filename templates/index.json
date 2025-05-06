@@ -209,12 +209,11 @@
         "collection-2",
         "collection-3"
       ],
-      "disabled": true,
       "settings": {
         "full_width": true,
         "stack_collections": false,
-        "collections_per_row": 3,
-        "show_progress_bar": false,
+        "collections_per_row": 4,
+        "show_progress_bar": true,
         "subheading": "",
         "title": "Collection list",
         "content": "",
