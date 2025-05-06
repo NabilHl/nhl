@@ -18,7 +18,7 @@
           "type": "message",
           "settings": {
             "text": "Welcome to our Store Click here to Discover the latest Coupons and Promotions",
-            "url": ""
+            "url": "shopify://pages/check-carefully"
           }
         }
       },
