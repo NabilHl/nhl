@@ -236,9 +236,9 @@
         "text_style": "fill",
         "scrolling_mode": "auto",
         "scrolling_speed": 10,
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
+        "background": "#000000",
+        "background_gradient": "linear-gradient(320deg, rgba(0, 76, 132, 1) 16%, rgba(10, 156, 255, 1) 52%, rgba(226, 128, 188, 1) 100%)",
+        "text_color": "#ffffff",
         "text_gradient": ""
       }
     },
