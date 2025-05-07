@@ -216,13 +216,28 @@
             "overlay_color": "#000000",
             "overlay_opacity": 30
           }
+        },
+        "collection_qAwHP7": {
+          "type": "collection",
+          "settings": {
+            "collection": "scarf-collection",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h2",
+            "text_position": "place-self-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
         }
       },
       "block_order": [
         "collection-1",
         "collection-2",
         "collection-3",
-        "collection_Ck7bhN"
+        "collection_Ck7bhN",
+        "collection_qAwHP7"
       ],
       "settings": {
         "full_width": true,
