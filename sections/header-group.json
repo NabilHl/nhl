@@ -17,7 +17,7 @@
         "message": {
           "type": "message",
           "settings": {
-            "text": "Welcome to our Store Click here to Discover the latest Coupons and Promotions",
+            "text": "مرحبا بك في متجرنا إضغط هنا لمعرفة آخر العروض و التخفيضات",
             "url": "shopify://pages/check-carefully"
           }
         }
