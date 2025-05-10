@@ -15,48 +15,6 @@
         "content_width": "100%"
       }
     },
-    "image_with_text_overlay_9q7TEC": {
-      "type": "image-with-text-overlay",
-      "blocks": {
-        "subheading_yN9xM4": {
-          "type": "subheading",
-          "settings": {
-            "text": ""
-          }
-        },
-        "heading_fPpk9G": {
-          "type": "heading",
-          "settings": {
-            "text": "",
-            "heading_tag": "h1"
-          }
-        },
-        "richtext_z4GDFB": {
-          "type": "richtext",
-          "settings": {
-            "content": ""
-          }
-        }
-      },
-      "block_order": [
-        "subheading_yN9xM4",
-        "heading_fPpk9G",
-        "richtext_z4GDFB"
-      ],
-      "name": "Image with text overlay",
-      "settings": {
-        "full_width": true,
-        "allow_transparent_header": false,
-        "enable_parallax": false,
-        "image_size": "auto",
-        "image": "shopify://shop_images/1000003421.jpg",
-        "mobile_text_position": "place-self-center text-center",
-        "desktop_text_position": "sm:place-self-center sm:text-center",
-        "text_color": "#ffffff",
-        "overlay_color": "#000000",
-        "overlay_opacity": 0
-      }
-    },
     "video_e9ErmY": {
       "type": "video",
       "blocks": {
@@ -88,11 +46,46 @@
         "overlay_color": "#000000",
         "overlay_opacity": 30
       }
+    },
+    "blog_posts_BpgMMr": {
+      "type": "blog-posts",
+      "blocks": {
+        "article_ARLQGV": {
+          "type": "article",
+          "settings": {
+            "article": "",
+            "background": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "article_ARLQGV"
+      ],
+      "name": "Featured blog post",
+      "settings": {
+        "full_width": true,
+        "show_excerpt": false,
+        "show_date": false,
+        "show_author": false,
+        "show_comments_count": false,
+        "show_category": false,
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "link_url": "",
+        "link_text": "",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
+      }
     }
   },
   "order": [
     "main",
-    "image_with_text_overlay_9q7TEC",
-    "video_e9ErmY"
+    "video_e9ErmY",
+    "blog_posts_BpgMMr"
   ]
 }
