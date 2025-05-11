@@ -1,47 +1,72 @@
-<style>
-  .custom-whatsapp {
-    position: fixed;
-    bottom: 40px;
-    right: 40px;
-    width: 60px;
-    height: 60px;
-    background-color: #25d366;
-    color: #FFF;
-    border-radius: 50%;
-    box-shadow: 2px 2px 3px #999;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    overflow: hidden; /* Prevents overflow from the SVG */
-  }
-
-  .custom-whatsapp svg {
-    width: 70%;
-    height: 70%;
-    fill: white;
-  }
-
-  @media(max-width:768px){
-    .custom-whatsapp {
-      width: 50px;
-      height: 50px;
-      bottom: 20px;
-      right: 20px;
-    }
-
-    .custom-whatsapp svg {
-      width: 70%;
-      height: 70%;
-    }
-  }
-</style>
-
-{% if section.settings.show_whatsapp %}
+<style>  
+  .custom-whatsapp {  
+    position: fixed;  
+    bottom: 40px;  
+    right: 40px;  
+    width: 60px;  
+    height: 60px;  
+    background-color: #25d366;  
+    color: #FFF;  
+    border-radius: 50%;  
+    box-shadow: 2px 2px 3px #999;  
+    z-index: 1000;  
+    display: flex;  
+    align-items: center;  
+    justify-content: center;  
+    text-decoration: none;  
+  }  
+  
+  .custom-whatsapp svg {  
+    width: 30px;  
+    height: 30px;  
+    fill: white;  
+  }  
+  
+  @media(max-width:768px){  
+    .custom-whatsapp {  
+      width: 50px;  
+      height: 50px;  
+      bottom: 20px;  
+      right: 20px;  
+    }  
+  
+    .custom-whatsapp svg {  
+      width: 24px;  
+      height: 24px;  
+    }  
+  }  
+</style>  {% if section.settings.show_whatsapp %}
 <a href="https://wa.me/message/UXXAS4WMGCIIP1" class="custom-whatsapp" target="_blank" aria-label="Chat on WhatsApp">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="-93.2412 -156.2325 808.0904 937.395">
-    <path d="M242.63 186.78c-5.205-11.57-10.684-11.803-15.636-12.006-4.05-.173-8.687-.162-13.316-.162-4.632 0-12.161 1.74-18.527 8.693-6.37 6.953-24.322 23.761-24.322 57.947 0 34.19 24.901 67.222 28.372 71.862 3.474 4.634 48.07 77.028 118.694 104.88 58.696 23.146 70.64 18.542 83.38 17.384 12.74-1.158 41.11-16.805 46.9-33.03 5.791-16.223 5.791-30.128 4.054-33.035-1.738-2.896-6.37-4.633-13.319-8.108-6.95-3.475-41.11-20.287-47.48-22.603-6.37-2.316-11.003-3.474-15.635 3.482-4.633 6.95-17.94 22.596-21.996 27.23-4.053 4.643-8.106 5.222-15.056 1.747-6.949-3.485-29.328-10.815-55.876-34.485-20.656-18.416-34.6-41.16-38.656-48.116-4.053-6.95-.433-10.714 3.052-14.178 3.12-3.113 6.95-8.11 10.424-12.168 3.467-4.057 4.626-6.953 6.942-11.586 2.316-4.64 1.158-8.698-.579-12.172-1.737-3.475-15.241-37.838-21.42-51.576" fill="#FFF"/>
-  </svg>
+<svg xmlns="http://www.w3.org/2000/svg" height="800" width="1200" viewBox="-93.2412 -156.2325 808.0904 937.395"><path d="M242.63 186.78c-5.205-11.57-10.684-11.803-15.636-12.006-4.05-.173-8.687-.162-13.316-.162-4.632 0-12.161 1.74-18.527 8.693-6.37 6.953-24.322 23.761-24.322 57.947 0 34.19 24.901 67.222 28.372 71.862 3.474 4.634 48.07 77.028 118.694 104.88 58.696 23.146 70.64 18.542 83.38 17.384 12.74-1.158 41.11-16.805 46.9-33.03 5.791-16.223 5.791-30.128 4.054-33.035-1.738-2.896-6.37-4.633-13.319-8.108-6.95-3.475-41.11-20.287-47.48-22.603-6.37-2.316-11.003-3.474-15.635 3.482-4.633 6.95-17.94 22.596-21.996 27.23-4.053 4.643-8.106 5.222-15.056 1.747-6.949-3.485-29.328-10.815-55.876-34.485-20.656-18.416-34.6-41.16-38.656-48.116-4.053-6.95-.433-10.714 3.052-14.178 3.12-3.113 6.95-8.11 10.424-12.168 3.467-4.057 4.626-6.953 6.942-11.586 2.316-4.64 1.158-8.698-.579-12.172-1.737-3.475-15.241-37.838-21.42-51.576" fill="#FFF"/></svg>
 </a>
 {% endif %}
+
+{% schema %}
+{
+"name": "Whatsapp Button",
+"settings": [
+{
+"type": "checkbox",
+"id": "show_whatsapp",
+"label": "Show Whatsapp",
+"default": true
+},
+{
+"type": "text",
+"id": "whatsapp_number",
+"label": "Please Enter Your Phone Number"
+},
+{
+"type": "text",
+"id": "whatsapp_msg",
+"label": "Please Enter Your Msg"
+}
+],
+"presets":[
+{
+"name":"WSP - Whatsapp Button"
+}
+]
+}
+{% endschema %}
+
