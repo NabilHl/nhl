@@ -51,6 +51,16 @@
     "favicon": "shopify://shop_images/1010.png",
     "checkout_accent_color": "#f0c417",
     "checkout_button_color": "#1a1a1a",
+    "sections": {
+      "Whatsapp": {
+        "type": "Whatsapp",
+        "settings": {
+          "show_whatsapp": true,
+          "whatsapp_number": "0772925382",
+          "whatsapp_msg": "بدأ المحادثة"
+        }
+      }
+    },
     "content_for_index": [],
     "blocks": {
       "3847134708050210359": {
